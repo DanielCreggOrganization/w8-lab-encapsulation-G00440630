@@ -12,7 +12,10 @@
           "redhat.java", // Language Support for Java(TM) by Red Hat
           "vscjava.vscode-java-debug", // Debugger for Java
           "vscjava.vscode-java-dependency", // Project Manager for Java
-          "VisualStudioExptTeam.vscodeintellicode" // Visual Studio IntelliCode
+          "VisualStudioExptTeam.vscodeintellicode", // Visual Studio IntelliCode
+          "github.copilot@prerelease",
+          "github.copilot-chat@prerelease",
+          "bierner.markdown-mermaid" // To render mermaid diagrams
         ]
       }
     }
