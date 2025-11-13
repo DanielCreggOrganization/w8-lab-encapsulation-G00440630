@@ -14,5 +14,10 @@ public class Main {
         System.out.println("Student: " + student.name);
         System.out.println("Student ID: " + student.studentId);
         System.out.println("GPA: " + student.gpa);
+
+        // Create a SecretMessage object
+        SecretMessage secret = new SecretMessage("This is a secret!");
+        // Type secret. and observe autocomplete - message field is not visible
+        secret.displayMessage();
     }
 }
