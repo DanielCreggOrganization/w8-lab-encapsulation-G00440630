@@ -2,7 +2,7 @@ package ie.atu.encapsulation;
 
 public class SecretMessage {
 
-	private String message;
+	public String message;
 
 	public SecretMessage(String message) {
 		this.message = message;
