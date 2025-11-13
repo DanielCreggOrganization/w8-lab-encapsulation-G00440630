@@ -16,18 +16,19 @@ Think of encapsulation like a capsule or protective shell around your data. Just
 In this lab, you'll learn the building blocks of encapsulation through hands-on exercises that demonstrate how to properly protect and manage your object's data.
 
 ## Table of Contents
-1. [Access Modifiers](#1-access-modifiers)
-2. [Data Hiding](#2-data-hiding)
-3. [Getters and Setters](#3-getters-and-setters)
-4. [Data Validation](#4-data-validation)
+1. [Lab Setup](#1-lab-setup)
+2. [Access Modifiers](#2-access-modifiers)
+3. [Data Hiding](#3-data-hiding)
+4. [Getters and Setters](#4-getters-and-setters)
+5. [Data Validation](#5-data-validation)
 
-## Lab Setup
+## 1. Lab Setup
 1. Create a package called `ie.atu.encapsulation`
 2. Create a `Main` class inside this package
-3. Create a `main` method inside this Main class
-4. Place all the below classes from the DIY sections into this package. 
+3. Create a `main` method inside this `Main` class
+4. Place all the classes from the below DIY sections into this package. Use the `main` method in the `Main` class to run them. 
 
-## 1. Access Modifiers
+## 2. Access Modifiers
 
 ### Learning Objective
 Understand how access modifiers control visibility of class members and see firsthand how the `public` and `private` keywords affect what you can access from outside a class.
@@ -37,7 +38,7 @@ Access modifiers are keywords that set the accessibility level of classes, metho
 - **public**: The member is accessible from anywhere in your program
 - **private**: The member is only accessible within the same class
 
-When you use the dot operator (`.`) on an object in VS Code, IntelliSense shows you all the members you can access. This is a powerful visual demonstration of encapsulation in action - when you make a field private, it literally disappears from the list of accessible members.
+When you use the dot operator (`.`) on an object we create in the `main` method in VS Code, IntelliSense shows you a list of all the members you can access. This is a powerful visual demonstration of encapsulation in action - when you make a field private, it disappears from the list of accessible members.
 
 ### Example: The Problem with Public Fields
 ```java
@@ -59,8 +60,7 @@ public class Main {
         BankAccount account = new BankAccount(1000.00);
         
         // This should NOT be allowed, but it is!
-        account.balance = -500.00;  // Negative balance!
-        account.balance = 999999.99;  // Unlimited money!
+        account.balance = -500.00;  // Negative balance! - Not Allowed in this case
         
         System.out.println("Balance: " + account.balance);
     }
@@ -128,14 +128,14 @@ graph LR
 **Expected Observation:**
 When you type `student.` in VS Code:
 - **With public fields**: You see `name`, `studentId`, `gpa`, constructor, etc.
-- **With private fields**:  `name`, `studentId` and `gpa` will have dissapeared from the list and are inaccessible 
+- **With private fields**:  `name`, `studentId` and `gpa` will have dissapeared from the list and are inaccessible. 
 
 The private fields have "disappeared" from outside access! Later we will show how to create public **getter** and **setter** methods that will provide access to these private instance varibales.  
 
 ### Key Takeaway
 The disappearance of private members from the autocomplete list is not just a convenience feature - it's the IDE enforcing Java's encapsulation rules. If you can't see it in the list, you can't access it directly. This is encapsulation protecting your data.
 
-## 2. Data Hiding
+## 3. Data Hiding
 
 ### Learning Objective
 Learn how to hide data using private access modifiers and understand why it's important for building robust applications.
@@ -176,7 +176,7 @@ Create a `SecretMessage` class that:
 - Try and call the message field directly using the dot operator (you should get a compilation error)
 - Print the message to the console using the public method
 
-## 3. Getters and Setters
+## 4. Getters and Setters
 
 ### Learning Objective
 Learn how to provide controlled access to private fields using getter and setter methods.
@@ -224,7 +224,7 @@ Test your class in the `Main` method by:
 - Reading the temperature value using the getter
 - Printing the result to the console
 
-## 4. Data Validation
+## 5. Data Validation
 
 ### Learning Objective
 Understand how to validate data both in setter methods and constructors, and how to reuse validation logic effectively with helper methods.
